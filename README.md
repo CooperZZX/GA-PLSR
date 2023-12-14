@@ -6,9 +6,9 @@ There is one data file: **train_dat.mat**, that helps you run this demo.
 ## main function
 **demo_general_train_V4_2.m**
 
-This is the main function that trains the GA-PLSR model. Just run the code after setting propers file directories in the very first part of the code.
+This is the main function that trains the GA-PLSR model. Just run the code after setting proper file directories in the very first part of the code.
 
-In this demo, you may also want to change the parameters in the "model parameters" part. Make sure you have understood these parameters before changing them. You can also just change the parameter value and see what will happen.
+In this demo, you may also want to change the parameters in the "model parameters" part. Make sure you have understood these parameters before changing them. You can also just change the values and see what will happen.
 
 ## postprocessing
 **Beta_integrate_stop_GA_intime_V3_Oxide.m**
