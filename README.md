@@ -29,8 +29,11 @@ Here, m, n, and b are the number of chromosomes (band combinations) before selec
 <img src="https://github.com/CooperZZX/GA-PLSR/blob/main/images/Flowchart.jpg" width="60%" height="60%">
 
 **The flowchart of the code**
+
 (a) The preprocessing of training data. The train_dat.mat is the result of this step.
+
 (b) The training process of GA-PLSR. Model parameters of every epoch are stored together for the next selection. The code was run 120 times in 6 different generational differences with 20 solutions each time to avoid local optima. STD is the standard deviation of each oxide’s contents estimated from CE-4 D10 spectra. RMSEP is calculated from the validation set. K is the efficient between RMSEP and STD. 
+
 (c) Eliminate overfitting and select the top 50 models with the smallest RMSEP from 2400 (120×20) solutions for each oxide. R2(n) is the R-square of the model on validation set at the nth epoch. THR is threshold.
 
 <img src="https://github.com/CooperZZX/GA-PLSR/blob/main/images/Train_process.jpg" width="60%" height="60%">
@@ -38,6 +41,9 @@ Here, m, n, and b are the number of chromosomes (band combinations) before selec
 **The training process of GA-PLSR model (take FeO for an example)**
 
 (a) Split of training dataset and validation dataset of reflectance spectra. About 2/3 spectra are selected as the training dataset and the other 1/3 spectra become the validation dataset. Both of them are evenly selected from the reference data based on the oxide contents. 
+
 (b) Split of training dataset and validation dataset of the 1st derived spectra. The vertical line marks the stop time of the training process when the rate of fitness decrease slowed. 
+
 (c) Changing of root mean square error of prediction (RMSEP), standard deviation (STD), and fitness during iterations. 
+
 (d) Changing of R-square (R2) during iterations.
