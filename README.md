@@ -20,4 +20,8 @@ This function visualizes the final solution of the GA-PLSR model, and evaluates 
 # Description
 ## Training of a GA-PLSR model
 
-https://github.com/CooperZZX/GA-PLSR/blob/main/images/Flowchart.jpg
+<img src="https://github.com/CooperZZX/GA-PLSR/blob/main/images/Flowchart.jpg" width="100%" height="100%">
+(a) The preprocessing of training data. 
+(b) The training process of GA-PLSR. Model parameters of every epoch are stored together for the next selection. The code was run 120 times in 6 different generational differences with 20 solutions each time to avoid local optima. STD is the standard deviation of each oxide’s contents estimated from CE-4 D10 spectra. RMSEP is calculated from the validation set. K is the efficient between RMSEP and STD. 
+(c) Eliminate overfitting and select the top 50 models with the smallest RMSEP from 2400 (120×20) solutions for each oxide. R2(n) is the R-square of the model on validation set at the nth epoch. THR is threshold.
+
