@@ -20,8 +20,13 @@ This function visualizes the final solution of the GA-PLSR model, and evaluates 
 # Description
 ## Training of a GA-PLSR model
 
-<img src="https://github.com/CooperZZX/GA-PLSR/blob/main/images/Flowchart.jpg" width="100%" height="100%">
+<img src="https://github.com/CooperZZX/GA-PLSR/blob/main/images/GA-PLSR%20architecture.jpg" width="60%" height="60%">
+**Architecture of the GA-PLSR model in this work**
+Here, m, n, and b are the number of chromosomes (band combinations) before selection, the number of chromosomes after selection, and the number of spectral bands, respectively. Each chromosome carries binary-coded genes that toggle the spectral bands on or off. The relationship between m and n is defined as n = m×gap, where gap (generation gap) represents the proportion to generate the next generation. The chromosomes exchange genes during the cross step and acquire new genes during the mutation step. The RMSEP is calculated using the validation set. The SD is the standard deviation of the predicted oxide contents from CE-4 D10 spectra and represents the effects of viewing geometry on the model. The fitness is obtained by adding of RMSEP and SD, effectively representing the overall quality of a chromosome.
+
+<img src="https://github.com/CooperZZX/GA-PLSR/blob/main/images/Flowchart.jpg" width="60%" height="60%">
 (a) The preprocessing of training data. 
 (b) The training process of GA-PLSR. Model parameters of every epoch are stored together for the next selection. The code was run 120 times in 6 different generational differences with 20 solutions each time to avoid local optima. STD is the standard deviation of each oxide’s contents estimated from CE-4 D10 spectra. RMSEP is calculated from the validation set. K is the efficient between RMSEP and STD. 
 (c) Eliminate overfitting and select the top 50 models with the smallest RMSEP from 2400 (120×20) solutions for each oxide. R2(n) is the R-square of the model on validation set at the nth epoch. THR is threshold.
+
 
