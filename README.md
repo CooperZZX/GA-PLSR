@@ -16,3 +16,8 @@ This function processes the data produced by the main function. It integrates al
 
 **Beta_R2_Setsplit_inpro_plot_V4.m**
 This function visualizes the final solution of the GA-PLSR model, and evaluates the uncertainties.
+
+# Description
+## Training of a GA-PLSR model
+
+https://github.com/CooperZZX/GA-PLSR/blob/main/images/Flowchart.jpg
